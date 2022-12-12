@@ -51,6 +51,7 @@ if($CaptchaToken!=''){
   }
 }else{
   echo "Tienes que validar el captcha para continuar.";
+  header("HTTP/1.1 404");
   echo "<br><a href='index.php'>Volver a Intentarlo</a>";
 }
 ?>
