@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-image: url("img/fondo.png");
+            background-image: url("img/FondoLogin.jpg");
         }
 
         /* Full-width input fields */
@@ -22,7 +22,7 @@
 
         /* Set a style for all buttons */
         button {
-            background-color: #4CAF50;
+            background-color: #6FB830;
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
@@ -91,7 +91,7 @@
 
         /* Modal Content/Box */
         .modal-content {
-            background-color: #fefefe;
+            background-color: #FFD6C1;
             margin: 5% auto 15% auto;
             /* 5% from the top, 15% from the bottom and centered */
             border: 1px solid #888;
@@ -154,6 +154,8 @@
             }
         }
     </style>
+        <!-- SCRIPT reCaptcha -->
+        <!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
 </head>
 
 <body>
@@ -162,19 +164,24 @@
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
-                <img src="img/avatar.png" alt="Avatar" class="avatar">
+                <img src="img/avatar.jpg" alt="Avatar" class="avatar">
             </div>
 
             <div class="container">
-                <label for="uname"><b>Usuario</b></label>
-                <input type="text" placeholder="Ingresar Usuario" name="username" required>
+            <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter your username..." name="username" required>
 
-                <label for="psw"><b>Contraseña</b></label>
-                <input type="password" placeholder="Ingresa tu Contraseña" name="password" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter your password..." name="password" required>
 
+                <!-- Captcha  data-s-->
+                <!--<div class="g-recaptcha"itekey="6Lc3M3IjAAAAAC2cQgJl6T7bzOTQeN2aOyH3hkeM" data-theme="dark"></div><br/>-->
+                
                 <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Recordarme
+                
+                <!-- COMENTAR -->
+                <!----><label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
             </div>
 

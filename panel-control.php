@@ -4,7 +4,7 @@ session_start();
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 } else {
-   echo "Inicia Sesion para acceder a este contenido.<br>";
+   echo "Login to access this content.<br>";
    echo "<br><a href='index.php'>Login</a>";
    header('Location: index.php');//redirige a la página de login si el usuario quiere ingresar sin iniciar sesion
 
@@ -17,8 +17,8 @@ $now = time();
 if($now > $_SESSION['expire']) {
 session_destroy();
 header('Location: index.php');//redirige a la página de login, modifica la url a tu conveniencia
-echo "Tu sesion a expirado,
-<a href='index.php'>Inicia Sesion</a>";
+echo "Your session has expired,
+<a href='index.php'>Login</a>";
 exit;
 }
 ?>
@@ -44,7 +44,7 @@ exit;
 <div class="jumbotron text-center">
   <h1>Welcome <?php echo  $_SESSION['username'];?></h1>
   <p>Keep your profile updated!</p> 
-  <a href="logout.php"><button type="button" class="btn btn-success"> Cerrar Sesion</button></a>
+  <a href="logout.php"><button type="button" class="btn btn-success">Logout</button></a>
 </div>
   
 
